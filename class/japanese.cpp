@@ -7,27 +7,33 @@
 
 #include "class/person.h"
 
-namespace test {
+namespace test
+{
 
-Japanese::Japanese() : Person("yukkun007") {
+Japanese::Japanese() : Person("yukkun007")
+{
+    std::cout << "test";
     std::cout << "私は日本人の" << Person::GetName() << "です。構築されます。"
-        << std::endl;
+              << std::endl;
 }
 
-Japanese::Japanese(std::string name) : Person(name) {
+Japanese::Japanese(std::string name) : Person(name)
+{
     std::cout << "私は日本人の" << Person::GetName() << "です。構築されます。"
-        << std::endl;
+              << std::endl;
 }
 
-Japanese::~Japanese() {
+Japanese::~Japanese()
+{
     std::cout << "私は日本人の" << Person::GetName() << "です。破棄されます。"
-        << std::endl;
+              << std::endl;
 }
 
-std::string Japanese::GetName() {
+std::string Japanese::GetName()
+{
     std::string name = Person::GetName();
     std::cout << "私は日本人の" << name << "です。" << std::endl;
     return name;
 }
 
-}  // namespace test
+} // namespace test
